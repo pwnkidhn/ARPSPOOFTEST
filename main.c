@@ -154,8 +154,6 @@ int main(int argc, char *argv[]){
     memcpy(packet,eth,ETH_HLEN);
     memcpy(packet+ETH_HLEN,ar,ARP_HLEN);
 
-    if(!pcap_sendpacket(handle,packet,packetSize))
-        printf("Success");
 
     pcap_close(handle);
     return 0;
